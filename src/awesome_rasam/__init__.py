@@ -1,6 +1,6 @@
 # __init__.py
 
-__version__ = "0.0.5"
+__version__ = "0.0.6"
 
 import time
 import traceback
@@ -67,9 +67,9 @@ class AwesomeRasam:
         if selector==">self":
             el = self._soup
         else:
-            el_list = self._soup.select(selector)
-            if el_list:
-                el = el_list[0]
+            el = self._soup.select_one(selector)
+            if el:
+                pass
             elif flag:
                 raise ElementNotFound(selector)
             else:

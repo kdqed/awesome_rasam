@@ -22,7 +22,7 @@ print(rasam.get("title",">text"))
 ```
 
 ### From Text
-Initialize the soup under-the-hood with HTML/XML formatted text. This is useful when you get HTML through a request sessions or through a headless browser
+Initialize the soup under-the-hood with HTML/XML formatted text. This is useful when you get HTML through a request session or through a headless browser.
 ```
 from awesome_rasam import AwesomeRasam
 
@@ -44,7 +44,7 @@ rasam = AwesomeRasam(soup)
 - All scraping is done by providing CSS selectors to pick elements, and the attributes to pick from those elements.
 - In addition to the attributes present on element tag, special attributes `>text`, `>inner_markup`, `>outer_markup`, and `>rasam`
 - `get()` and `get_all()` methods are provided to select first matching and all matching elements respectively
-- If the element is not found, or the attributed is not present, an Exception is raised. This can be prevented by passing `flag=True`, and optional fallback value can be specified by passing `fallback="N/A"`
+- If the element is not found, or the attributed is not present, an Exception is raised. This can be prevented by passing `flag=False`, and optional fallback value can be specified by passing `fallback="N/A"`
 - A `pipe` argument can be passed containing a function or a list of functions to be executed on the result before returning
 ```
 import json
